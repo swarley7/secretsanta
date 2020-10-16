@@ -1,0 +1,31 @@
+{"amounts": [20, 50, 200], 
+    "party": [
+        {
+            "name": "Johno Stagboi", 
+            "phone": "+61400000001"
+        }, 
+        {
+            "name": "Jane Stevens",
+            "phone": "+61400000002"
+        },{
+            "name": "Jimmy McGee",
+            "phone": "+61400000003"
+        }
+        ,
+        {
+            "name": "Stoner Jones",
+            "phone": "+61400000004"
+        }
+        ,
+        {
+            "name": "Jenny Richman",
+            "phone": "+61400000005‬"
+        }
+        ,
+        {
+            "name": "Wayne Kerro",
+            "phone": "+61400000006"
+        }
+    ],
+    "repeat": false
+}
