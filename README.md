@@ -28,3 +28,7 @@ Once done, you can run your secret santa by doing
 `AWS_REGION=<YOUR PREFERRED AWS REGION HERE> go run secretsanta.go -d=true -c <YOUR CONFIG FILE HERE>`
 
 *Note:* Debug mode disables the actual delivery of SMS' for safety. Use it to validate your secret santa app works before doing it live! (A live run will have different output :) )
+
+When you're ready to do it live, flip the debug flag to false:
+
+`AWS_REGION=<YOUR PREFERRED AWS REGION HERE> go run secretsanta.go -d=false -c <YOUR CONFIG FILE HERE>`
