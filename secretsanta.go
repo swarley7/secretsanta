@@ -92,7 +92,7 @@ func main() {
 	debug := flag.Bool("d", true, "Don't actually do the thing")
 
 	flag.Parse()
-	rand.Seed(1337) // Hardcoded seed means you can replicate the results lol! This is handy if your idiot family forgets their fucking match :(
+	rand.Seed(1338) // Hardcoded seed means you can replicate the results lol! This is handy if your idiot family forgets their fucking match :(
 	if *debug {
 		rand.Seed(13337) // Debug mode; prints who got who to the terminal. use a different seed cos, like, NO PEEKING! ;-)
 	}
@@ -119,11 +119,12 @@ func main() {
 		}
 		if *debug {
 			fmt.Printf("Person: %s has:", santa.Name)
+
+			for k, v := range santa.Gifts {
+				fmt.Printf(" [%d - %s] ", k, v)
+			}
+			fmt.Printf("\n")
 		}
-		for k, v := range santa.Gifts {
-			fmt.Printf(" [%d - %s] ", k, v)
-		}
-		fmt.Printf("\n")
 	}
 
 	if *debug {
@@ -151,7 +152,7 @@ func main() {
 
 			MessageAttributes: map[string]*sns.MessageAttributeValue{
 
-				"AWS.SNS.SMS.SenderID": &sns.MessageAttributeValue{StringValue: aws.String("SecretSanta"), DataType: aws.String("String")}, "AWS.SNS.SMS.SMSType": &sns.MessageAttributeValue{StringValue: aws.String("Transactional"), DataType: aws.String("String")},
+				"AWS.SNS.SMS.SenderID": &sns.MessageAttributeValue{StringValue: aws.String("SecretSanta"), DataType: aws.String("String")}, "AWS.SNS.SMS.SMSType": &sns.MessageAttributeValue{StringValue: aws.String("Promotional"), DataType: aws.String("String")},
 			},
 		}
 		time.Sleep(time.Duration(1 * time.Second))
